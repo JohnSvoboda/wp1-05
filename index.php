@@ -14,6 +14,8 @@
     $Muž = 40 ;
     $Podnikatel = 100 ;
     $skupina = 50 ;
+    $cigarety = 100 ;
+    $bezdakkombo = $vodkaPrice - $cigarety ;
 
 
 
@@ -33,6 +35,25 @@
 
 
     <p> <?php echo "Peníze Bezdomovce před návštěvou večerky:  $homelessMoney. " ?> </p>
+   <?php
+    if
+   ($homelessMoney >= $bezdakKombo)
+     { $homelessMoney =  $homelessMoney - $bezdakKombo ;
+     echo"bezďák si koupil vodku a cigarety ";                             }
+ elseif
+   ($homelessMoney >= $cigaPrice)
+  {$homelessMoney = $homelessMoney - $cigaPrice ;
+     echo "bezďák neměl peníze na vodku tak si koupil jen cigarety. ";  }
+  else {
+       echo "bezďák odchází s prázdnou. ";
+     }
+      echo "zbytek peněz po návštěvě večerky: $homelessMoney" ;
+     ?>
+
+
+
+
+
 
 
 
